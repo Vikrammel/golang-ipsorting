@@ -1,11 +1,12 @@
-#Sorting <IP:Port>s in Golang#
-###by Vikram Melkote####
+# Sorting <IP:Port>s in Golang
 
-##Setup##
+### by Vikram Melkote
+
+## Setup
 
 * git clone into `~/go/src` or download `.go` files and place in `~/go/src/ipsorting`:
 
-	`git clone `
+	`git clone https://github.com/Vikrammel/golang-ipsorting.git`
 
 * if vendoring, place `.go` files in `<projectroot>/app/vendor/ipsorting`
 
@@ -17,7 +18,7 @@
 	)
 	```
 
-##Usage in code##
+## Usage in code
 
 use on string or an array/slice of strings of ip:ports (ipsorting.go can be easily modified to work with just IPs instead of IP:Port)
 	
@@ -25,7 +26,8 @@ use on string or an array/slice of strings of ip:ports (ipsorting.go can be easi
 	
 	```go
 	sortedPair := ipsorting.OrderIPPair("10.0.0.14:8080", "10.0.0.14:5060")
-	//sortedPair is now a string array literal of size 2 of the two ip:port strings passed in in ascending numerical order
+	//sortedPair is now a string array literal of size 2 of the two ip:port strings passed in
+	//in ascending numerical order
 	log.Println(sortedPair[0])
 	//10.0.0.14:5060
 	```
@@ -51,7 +53,7 @@ use on string or an array/slice of strings of ip:ports (ipsorting.go can be easi
 	//adapted binarySearch, complexity = O(log(n))
 	```
 
-##Reference##
+## Reference
 
 [Quicksort in python](https://inst.eecs.berkeley.edu/~cs188/sp09/projects/tutorial/docs/quickSort.html)
 
